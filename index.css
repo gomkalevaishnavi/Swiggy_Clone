@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Mulish, sans-serif;
+}
+html{
+    background-color: #FBFBFB;
+}
+.nav-container{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 1px 1px rgb(226,226,226);
+    padding: 10px;
+    margin-bottom: 40px;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0;
+    align-items: center;
+}
+.menu{
+    display: none;
+}
+.left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+}
+
+
+.bar a{
+    color: black;
+   
+
+}
+
+.bar :hover{
+  cursor: pointer;
+}
+
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: white;
+}
+.right > div{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.right :hover{
+    cursor: pointer;
+}
+.logo{
+    width: 40px;
+}
+
+.nav-container1{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.3px solid gray;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+.nav-container1 > .right-half{
+    display: flex;
+    gap: 20px;
+}
+.nav-container1 > .right-half > span{
+    font-weight: 300;
+}
+
+.nav-container1 > .right-half :hover {
+    color: #181819;
+    
+ cursor: pointer;
+  content: '';
+
+ 
+}
+.container{
+    width: 80vw;
+    margin: 120px auto;
+    margin-bottom: 50px;
+}
+.card{
+    padding: 10px;
+    width: 250px;
+    position: relative;
+    padding-bottom: 0;
+}
+.card-image{
+    width: 250px;
+}
+.card p {
+    margin: 5px 0;
+    font-weight: 100 !important;
+    font-size: 14px;
+    color: gray;
+}
+.rating-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 0.1px solid gray;
+    font-size: 13px;
+}
+.bullet{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+}
+.offer-container{
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 0.2px solid gray;
+    font-size: 15px;
+    align-items: center;
+    gap: 10px;
+    color: #8A5848;
+}
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 15px;
+    margin-top: 20px;
+}
+.card:hover{
+    outline: 0.5px solid gray;
+}
+.rating-container > .rating{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: #DB7C38;
+    color: white;
+    font-size: 15px;
+    padding: 5px 8px;
+}
+.rating-container > .third-card{
+    background-color: green;
+}
+.star{
+    font-size: 15px !important;
+}
+/* .card::before{
+    content: 'PROMOTED';
+    display: block;
+    position: absolute;
+    top: 10px;
+    background-color: #393C41;
+    color: white;
+    padding: 4px;
+    left: 4px;
+    font-size: 12px;
+} */
+.btn{
+    border: none;
+    font-weight: bold;
+    color: rgb(11, 119, 227);
+    display: block;
+    margin: 5px auto;
+    padding: 5px 0;
+    visibility: hidden;
+    background-color: white;
+}
+.card:hover .btn{
+    visibility: visible;
+}
+.footer{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 100px;
+}
+.footer h5{
+    color: #808080;
+    margin: 10px 0;
+}
+.footer > div{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+.footer > div > a{
+    color: white;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+.footer img{
+    width: 150px;
+    border: 2px solid gray;
+    transition-duration: 0.5s;
+    border-radius: 5px;
+}
+.footer img:hover{
+    width: 160px;
+}
+.store-container{
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+.footer a{
+    font-weight: 300;
+}
+.footer a:hover{
+    font-weight: bold;
+}
+@media (max-width:800px){
+    .cards-container{
+        grid-template-columns: repeat(2,auto);
+    }
+    .footer{
+        grid-template-columns: repeat(2,auto);
+    }
+    .menu{
+        display: block;
+    }
+    .right{
+        display: none;
+    }
+}
+@media (max-width:600px){
+    .cards-container{
+        grid-template-columns: auto;
+        justify-items: center;
+    }
+    .footer{
+        grid-template-columns: auto;
+        gap: 20px;
+    }
+}
+
+
+
+.badge{
+    background-color: #393C41;
+    width: 70px;
+    margin: 100px;
+    position: absolute;
+    top: 10px;
+    color: white;
+    z-index: 5;
+    left: 0px;
+    margin: 0;
+    padding: 5px;
+    font-size: 12px;
+}
+.badge::before{
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-color: #393C41;
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    transform: skewY(15deg);
+    left:0
+}
